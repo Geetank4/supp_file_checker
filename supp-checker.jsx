@@ -75,11 +75,8 @@ async function extractTextFromPDF(file) {
   // Dynamic import avoids SSR issues in Next.js
   const pdfjsLib = await import("pdfjs-dist");
 
-  // Set CDN worker — must match the installed pdfjs-dist version
-  if (!pdfjsLib.GlobalWorkerOptions.workerSrc) {
-    pdfjsLib.GlobalWorkerOptions.workerSrc =
-      `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.js`;
-  }
+  // Worker served from public/ (copied via postinstall — no CDN needed)
+  pdfjsLib.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.js";
 
   const arrayBuffer = await file.arrayBuffer();
   const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;

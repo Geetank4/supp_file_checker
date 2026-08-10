@@ -19,7 +19,7 @@ const TERM_GROUPS = [
   { label: "Extended Data",               covers: ["extended data"] },
   { label: "Source Data",                 covers: ["source data", "source datasets"] },
   { label: "Supplementary File",          covers: ["supplementary file", "supplementary files", "supplemental file", "supplemental files"] },
-  { label: "Supplementary Protocol",      covers: ["supplementary protocol", "supplemental protocol", "study protocol"] },
+  { label: "Supplementary Protocol",      covers: ["supplementary protocol", "supplemental protocol"] },
   { label: "Supplementary Video",         covers: ["supplementary video", "supplementary videos", "supplemental video", "supplemental videos"] },
   { label: "Supplementary Results/Notes", covers: ["supplementary results", "supplemental results", "supplementary notes", "supplementary text", "supplementary discussion", "supplementary analysis"] },
   { label: "Supplementary Box/Exhibit",   covers: ["supplementary box", "supplemental box", "supplementary exhibit"] },
